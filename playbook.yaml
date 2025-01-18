@@ -1,0 +1,10 @@
+---
+- name: uninstall
+  hosts: ins1
+  become: true
+
+  tasks:
+  - name: uninstalling git
+    ansible.builtin.dnf:
+      name: nginx
+      state: absent
